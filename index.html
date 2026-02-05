@@ -57,12 +57,12 @@
     /* HERO */
     .hero {
       position: relative;
-      min-height: 60vh; /* slightly shorter so Spotify sits higher */
+      height: 85vh; /* full-screen style */
       background: url('angel-young.png') center/cover no-repeat;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      padding-bottom: 40px; /* reduced padding */
+      padding-bottom: 80px;
     }
 
     .hero-overlay {
@@ -79,16 +79,35 @@
     }
 
     .hero-text h1 {
-      font-size: 3.4rem;
-      letter-spacing: 4px;
-      margin-bottom: 10px;
+      font-size: 4rem;
+      letter-spacing: 6px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
     }
 
     .hero-text p {
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       opacity: 0.9;
       max-width: 720px;
-      margin: 0 auto;
+      margin: 0 auto 25px;
+    }
+
+    /* LISTEN BUTTON */
+    .listen-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #1db954;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .listen-btn:hover {
+      background: #1ed760;
+      transform: translateY(-3px);
     }
 
     /* SPOTIFY PLAYER */
@@ -151,10 +170,15 @@
       <div class="hero-text">
         <h1>Angel Deris</h1>
         <p>Official music page. Stream, follow, and support Angel Deris on your favorite music and social platforms.</p>
+
+        <!-- LISTEN ON SPOTIFY BUTTON -->
+        <a class="listen-btn" href="https://open.spotify.com/album/2hkiTpfkO4kFQYnCBH5t8U" target="_blank">
+          Listen on Spotify
+        </a>
       </div>
     </section>
 
-    <!-- SPOTIFY PLAYER (playlist-style embed shows more tracks) -->
+    <!-- SPOTIFY PLAYER -->
     <section class="spotify-player">
       <iframe style="border-radius:12px"
         src="https://open.spotify.com/embed/album/2hkiTpfkO4kFQYnCBH5t8U?utm_source=generator&theme=0"
