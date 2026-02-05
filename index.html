@@ -1,35 +1,159 @@
-.hero {
-  position: relative;
-  min-height: 70vh;
-  background: url('angel-young.png') center/cover no-repeat;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 60px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Angel Deris | Official Music Page</title>
 
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.85));
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #000;
+      color: #ffffff;
+      min-height: 100vh;
+    }
 
-.hero-text {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  padding: 20px;
-}
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 70vh;
+      background: url('angel-young.png') center/cover no-repeat;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 60px;
+    }
 
-.hero-text h1 {
-  font-size: 3.4rem;
-  letter-spacing: 4px;
-  margin-bottom: 10px;
-}
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.85));
+    }
 
-.hero-text p {
-  font-size: 1.15rem;
-  opacity: 0.9;
-  max-width: 720px;
-  margin: 0 auto;
-}
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-text h1 {
+      font-size: 3.4rem;
+      letter-spacing: 4px;
+      margin-bottom: 10px;
+    }
+
+    .hero-text p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* LEFT SIDEBAR LINKS */
+    .sidebar-links {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 260px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+    }
+
+    .sidebar-links a {
+      display: block;
+      text-decoration: none;
+      padding: 12px 10px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .sidebar-links a:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-3px);
+    }
+
+    /* SPOTIFY PLAYER */
+    .spotify-player {
+      text-align: center;
+      padding: 40px 20px;
+      background: #111;
+      margin-left: 260px; /* pushes content right of sidebar */
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      background: #000;
+      margin-left: 260px;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 { font-size: 2.6rem; }
+      .sidebar-links {
+        position: relative;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 20px;
+      }
+      .spotify-player, footer {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LEFT SIDEBAR LINKS -->
+  <section class="sidebar-links">
+    <a href="https://open.spotify.com/album/2hkiTpfkO4kFQYnCBH5t8U" target="_blank">Spotify</a>
+    <a href="https://music.apple.com/us/album/static/1847857678" target="_blank">Apple Music</a>
+    <a href="https://music.apple.com/us/album/static/1847857678" target="_blank">iTunes</a>
+    <a href="https://www.facebook.com/profile.php?id=61586073990151" target="_blank">Facebook</a>
+    <a href="https://music.youtube.com/playlist?list=OLAK5uy_lqFJNTWGZpyebJrPJ8wyBGYtA3gAjtiH0" target="_blank">YouTube Music</a>
+    <a href="https://www.amazon.com/Transmission-Automatic/dp/B0FX1D8R1F" target="_blank">Amazon Music</a>
+    <a href="https://pandora.app.link/2l8hsWqANZb" target="_blank">Pandora</a>
+    <a href="https://www.deezer.com/us/album/840759712" target="_blank">Deezer</a>
+    <a href="https://www.iheart.com/artist/angel-deris-48360990/albums/static-356101642/" target="_blank">iHeartRadio</a>
+    <a href="https://play.anghami.com/song/1235292808" target="_blank">Anghami</a>
+    <a href="https://www.qobuz.com/gb-en/album/static-angel-deris/tizjw7m6j4apb" target="_blank">Qobuz</a>
+    <a href="https://www.tencent.com" target="_blank">Tencent</a>
+  </section>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Angel Deris</h1>
+      <p>Official music page. Stream, follow, and support Angel Deris on your favorite music and social platforms.</p>
+    </div>
+  </section>
+
+  <!-- SPOTIFY PLAYER -->
+  <section class="spotify-player">
+    <iframe src="https://open.spotify.com/embed/album/2hkiTpfkO4kFQYnCBH5t8U"
+            width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+    </iframe>
+  </section>
+
+  <footer>
+    © 2026 Angel Deris. All rights reserved.
+  </footer>
+
+</body>
+</html>
