@@ -57,12 +57,12 @@
     /* HERO */
     .hero {
       position: relative;
-      height: 50vh; /* shorter so music is visible */
+      height: 60vh; /* taller hero so buttons sit nicely */
       background: url('angel-young.png') center/cover no-repeat;
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      padding-bottom: 20px;
+      padding-bottom: 40px;
     }
 
     .hero-overlay {
@@ -79,20 +79,12 @@
     }
 
     .hero-text h1 {
-      font-size: 3.4rem;
+      font-size: 3.8rem;
       letter-spacing: 6px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       text-transform: uppercase;
     }
 
-    .hero-text p {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      max-width: 720px;
-      margin: 0 auto 20px;
-    }
-
-    /* BUTTONS */
     .hero-buttons {
       display: flex;
       gap: 20px;
@@ -128,10 +120,10 @@
       background: #ff4d4d;
     }
 
-    /* SPOTIFY PLAYER OVER HERO */
+    /* SPOTIFY PLAYER LOWERED */
     .spotify-wrapper {
       position: relative;
-      top: -100px; /* pulls player upward */
+      top: -40px; /* LOWERED by 3 songs (approx 120px) */
       padding: 0 20px;
       z-index: 5;
     }
@@ -150,7 +142,7 @@
       opacity: 0.7;
       border-top: 1px solid rgba(255,255,255,0.1);
       background: #000;
-      margin-top: -60px;
+      margin-top: -20px;
     }
 
     @media (max-width: 768px) {
@@ -167,7 +159,7 @@
         font-size: 2.6rem;
       }
       .spotify-wrapper {
-        top: -60px;
+        top: -20px;
       }
     }
   </style>
@@ -198,8 +190,7 @@
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="hero-text">
-        <h1>Angel Deris</h1>
-        <p>Official music page. Stream, follow, and support Angel Deris on your favorite music and social platforms.</p>
+        <h1>ANGEL DERIS</h1>
 
         <div class="hero-buttons">
           <a class="listen-btn spotify" href="https://open.spotify.com/album/2hkiTpfkO4kFQYnCBH5t8U" target="_blank">
@@ -213,7 +204,7 @@
       </div>
     </section>
 
-    <!-- SPOTIFY PLAYER OVER HERO -->
+    <!-- SPOTIFY PLAYER -->
     <div class="spotify-wrapper">
       <section class="spotify-player">
         <iframe style="border-radius:12px"
