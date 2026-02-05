@@ -14,6 +14,46 @@
       min-height: 100vh;
     }
 
+    /* LEFT SIDEBAR */
+    .sidebar-links {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 260px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(6px);
+      z-index: 10;
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+
+    .sidebar-links a {
+      display: block;
+      text-decoration: none;
+      padding: 12px 10px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: center;
+      transition: 0.2s ease;
+    }
+
+    .sidebar-links a:hover {
+      background: rgba(255,255,255,0.22);
+      transform: translateY(-3px);
+    }
+
+    /* MAIN CONTENT AREA */
+    .content {
+      margin-left: 260px;
+    }
+
     /* HERO */
     .hero {
       position: relative;
@@ -51,45 +91,11 @@
       margin: 0 auto;
     }
 
-    /* LEFT SIDEBAR LINKS */
-    .sidebar-links {
-      position: absolute;
-      top: 100px;
-      left: 0;
-      width: 260px;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      background: rgba(0,0,0,0.55);
-      backdrop-filter: blur(6px);
-      z-index: 10;
-    }
-
-    .sidebar-links a {
-      display: block;
-      text-decoration: none;
-      padding: 12px 10px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      font-size: 0.95rem;
-      font-weight: 600;
-      text-align: center;
-      transition: 0.2s ease;
-    }
-
-    .sidebar-links a:hover {
-      background: rgba(255,255,255,0.22);
-      transform: translateY(-3px);
-    }
-
     /* SPOTIFY PLAYER */
     .spotify-player {
       text-align: center;
-      padding: 40px 20px;
+      padding: 10px 20px 30px; /* moved up */
       background: #111;
-      margin-left: 260px; /* pushes content right of sidebar */
     }
 
     footer {
@@ -99,19 +105,20 @@
       opacity: 0.7;
       border-top: 1px solid rgba(255,255,255,0.1);
       background: #000;
-      margin-left: 260px;
     }
 
     @media (max-width: 768px) {
-      .hero-text h1 { font-size: 2.6rem; }
       .sidebar-links {
         position: relative;
         width: 100%;
         grid-template-columns: 1fr 1fr;
-        margin-bottom: 20px;
+        height: auto;
       }
-      .spotify-player, footer {
+      .content {
         margin-left: 0;
+      }
+      .hero-text h1 {
+        font-size: 2.6rem;
       }
     }
   </style>
@@ -119,7 +126,7 @@
 
 <body>
 
-  <!-- LEFT SIDEBAR LINKS -->
+  <!-- LEFT SIDEBAR -->
   <section class="sidebar-links">
     <a href="https://open.spotify.com/album/2hkiTpfkO4kFQYnCBH5t8U" target="_blank">Spotify</a>
     <a href="https://music.apple.com/us/album/static/1847857678" target="_blank">Apple Music</a>
@@ -135,25 +142,31 @@
     <a href="https://www.tencent.com" target="_blank">Tencent</a>
   </section>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-text">
-      <h1>Angel Deris</h1>
-      <p>Official music page. Stream, follow, and support Angel Deris on your favorite music and social platforms.</p>
-    </div>
-  </section>
+  <!-- MAIN CONTENT -->
+  <div class="content">
 
-  <!-- SPOTIFY PLAYER -->
-  <section class="spotify-player">
-    <iframe src="https://open.spotify.com/embed/album/2hkiTpfkO4kFQYnCBH5t8U"
-            width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
-    </iframe>
-  </section>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-text">
+        <h1>Angel Deris</h1>
+        <p>Official music page. Stream, follow, and support Angel Deris on your favorite music and social platforms.</p>
+      </div>
+    </section>
 
-  <footer>
-    © 2026 Angel Deris. All rights reserved.
-  </footer>
+    <!-- SPOTIFY PLAYER -->
+    <section class="spotify-player">
+      <iframe src="https://open.spotify.com/embed/album/2hkiTpfkO4kFQYnCBH5t8U"
+              width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media">
+      </iframe>
+    </section>
+
+    <footer>
+      © 2026 Angel Deris. All rights reserved.
+    </footer>
+
+  </div>
 
 </body>
 </html>
+
